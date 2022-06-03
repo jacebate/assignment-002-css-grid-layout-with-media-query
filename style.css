@@ -1,0 +1,115 @@
+.container{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "rightsidebar main leftsidebar"
+    "bottomsidebar politics politics"
+    "bottomsidebar technology technology"
+    "bottomsidebar locals locals"
+    "bottomsidebar opinion opinion"
+    "bottomsidebar sports sports"
+    ;
+    
+}
+header{
+    background-color: white;
+    grid-area: header;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    font-style: italic;
+}
+#rightsidebar{
+    background-color: white;
+    grid-area: rightsidebar;
+    border:2px gray solid;
+    font-size: small;
+
+}
+h3{
+    font-style: italic;
+    text-align: center;
+
+
+}
+main{
+    background-color: white;
+    grid-area: main;
+    border:2px gray solid;
+    font-size: small;
+}
+.main-img{
+    width:100%;
+    height: 30vh
+}
+#leftsidebar{
+    background-color: white;
+    grid-area: leftsidebar;
+    border:2px gray solid;
+    font-size: small;
+}
+#bottomsidebar{
+    background-color: white;
+    grid-area: bottomsidebar;
+    border:2px gray solid;
+    border-bottom: none;
+    font-size: small;
+}
+
+#politics{
+    background-color: yellowgreen;
+    grid-area: politics;
+    border:2px gray solid;
+    border-bottom: none;
+}
+#technology{
+    background-color: lightskyblue;
+    grid-area: technology;
+    border:2px gray solid;
+    border-bottom: none;
+    border-top: none;
+    
+}
+#opinion{
+    background-color: green;
+    grid-area: opinion;
+    border:2px gray solid;
+    border-bottom: none;
+    border-top: none;
+}
+#locals{
+    background-color: blue;
+    grid-area: locals;
+    border:2px gray solid;
+    border-bottom: none;
+    border-top: none;
+}
+#sports{
+    background-color: purple;
+    grid-area: sports;
+    border:2px gray solid;
+    border-top: none;
+
+}
+@media(max-width: 576px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+        grid-template-areas: 
+        "header"
+        "rightsidebar"
+        "main"
+        "leftsidebar"
+        "bottomsidebar"
+        "politics"
+        "technology"
+        "locals"
+        "opinion"
+        "sports"
+        ;
+    }
+}
